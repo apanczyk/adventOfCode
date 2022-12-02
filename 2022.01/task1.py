@@ -14,7 +14,7 @@ def load_elves_list(file):
     for line in fileinput.input(file):
         try:
             elves_list[len(elves_list)-1] += int(line.strip())
-        except Exception:
+        except ValueError:
             elves_list.append(0)
     return elves_list
 
